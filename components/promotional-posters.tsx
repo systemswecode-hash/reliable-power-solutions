@@ -36,7 +36,7 @@ export function PromotionalPosters() {
       image: "/posters/4.jpg",
       product: "Solar Water Heaters",
       cta: "Get Quote",
-    },
+    }
   ]
 
   const checkScroll = () => {

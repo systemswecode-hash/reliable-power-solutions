@@ -40,18 +40,21 @@ export function Header() {
               <div className="ml-10 flex items-baseline space-x-8">
                 <Link
                   href="/"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   href="/products"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
                   Products
                 </Link>
                 <Link
                   href="/services"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
                   Services
@@ -64,6 +67,7 @@ export function Header() {
                 </Link> */}
                 <Link
                   href="/about"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
                   About
@@ -94,35 +98,50 @@ export function Header() {
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false)
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)
+                  }}
                   className="text-muted-foreground hover:text-foreground hover:bg-accent px-3 py-2 text-sm font-medium rounded-md transition-colors block"
                 >
                   Home
                 </Link>
                 <Link
                   href="/products"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false)
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)
+                  }}
                   className="text-muted-foreground hover:text-foreground hover:bg-accent px-3 py-2 text-sm font-medium rounded-md transition-colors block"
                 >
                   Products
                 </Link>
                 <Link
                   href="/services"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false)
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)
+                  }}
                   className="text-muted-foreground hover:text-foreground hover:bg-accent px-3 py-2 text-sm font-medium rounded-md transition-colors block"
                 >
                   Services
                 </Link>
                 {/* <Link
                   href="/contact"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false)
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)
+                  }}
                   className="text-muted-foreground hover:text-foreground hover:bg-accent px-3 py-2 text-sm font-medium rounded-md transition-colors block"
                 >
                   Contact
                 </Link> */}
                 <Link
                   href="/about"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false)
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)
+                  }}
                   className="text-muted-foreground hover:text-foreground hover:bg-accent px-3 py-2 text-sm font-medium rounded-md transition-colors block"
                 >
                   About

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { useState } from "react"
+import { QuoteModal } from "@/components/quote-modal" // Fixed import to use named export instead of default export
 
 // Define image URLs as constants for reusability and clarity
 const LUMINOUS_LOGO_URL = "/Luminous.svg" // Placeholder URL, replace with actual path
@@ -488,6 +489,7 @@ export default function ProductsPage() {
 
   return (
     <>
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} productName={selectedProduct} />
       <div className="min-h-screen bg-background">
         <Header />
         <main>
@@ -507,7 +509,7 @@ export default function ProductsPage() {
           </section>
 
           {/* Solar Panels Section */}
-          <section className="py-20 bg-yellow-50">
+          <section id="solar-panels" className="py-20 bg-yellow-50 scroll-mt-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-foreground mb-4">Solar Panels</h2>
@@ -573,7 +575,7 @@ export default function ProductsPage() {
           </section>
 
           {/* Luminous Inverters Section */}
-          <section className="py-20 bg-blue-50">
+          <section id="inverters" className="py-20 bg-blue-50 scroll-mt-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-foreground mb-4">Inverters</h2>
@@ -634,7 +636,7 @@ export default function ProductsPage() {
           </section>
 
           {/* Luminous Batteries Section */}
-          <section className="py-20 bg-muted/30">
+          <section id="batteries" className="py-20 bg-muted/30 scroll-mt-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-foreground mb-4">Lead-Acid Batteries</h2>
